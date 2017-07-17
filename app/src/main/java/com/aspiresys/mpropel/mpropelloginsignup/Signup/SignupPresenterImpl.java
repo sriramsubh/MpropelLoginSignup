@@ -10,18 +10,16 @@ import java.util.regex.Pattern;
  */
 
 public class SignupPresenterImpl implements SignupPresenter {
-    private SignupView signupView;
     private SignupFragment signupFragment;
-    SignupPresenterImpl(SignupView signupView, SignupFragment signupFragment)
+    SignupPresenterImpl( SignupFragment signupFragment)
     {
-        this.signupView = signupView;
-        this.signupFragment = signupFragment;
+       this.signupFragment = signupFragment;
     }
     @Override
     public boolean SignupValidator(String username, String password) {
         Pattern pattern;
         Matcher matcher;
-//TODO add up extra signup modules here
+        //TODO add up extra signup modules here
         final String EMAIL_PATTERN =
                 "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";

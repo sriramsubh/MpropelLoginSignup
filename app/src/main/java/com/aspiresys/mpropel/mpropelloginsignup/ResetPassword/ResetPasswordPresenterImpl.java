@@ -10,24 +10,22 @@ import java.util.regex.Pattern;
  */
 
 public class ResetPasswordPresenterImpl implements ResetPasswordPresenter {
-    private ResetPasswordView resetPasswordView;
     private ResetPasswordFragment resetPasswordFragment;
-    ResetPasswordPresenterImpl(ResetPasswordView resetPasswordView, ResetPasswordFragment resetPasswordFragment)
+    ResetPasswordPresenterImpl(ResetPasswordFragment resetPasswordFragment)
     {
-        this.resetPasswordView = resetPasswordView;
-        this.resetPasswordFragment = resetPasswordFragment;
+       this.resetPasswordFragment = resetPasswordFragment;
     }
     @Override
-    public boolean EmailValidator(String useremail) {
+    public boolean EmailValidator(String userEmail) {
         Pattern pattern;
         Matcher matcher;
-//TODO add up extra email modules here
+        //TODO add up extra email modules here
         final String EMAIL_PATTERN =
                 "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
         pattern = Pattern.compile(EMAIL_PATTERN);
-        matcher = pattern.matcher(useremail);
+        matcher = pattern.matcher(userEmail);
         //TODO: set you own password validation here
         if(matcher.matches() ) {
 
@@ -35,7 +33,7 @@ public class ResetPasswordPresenterImpl implements ResetPasswordPresenter {
                 return true;
             }else{
 
-                resetPasswordFragment.showUseremailError("check useremail");
+                resetPasswordFragment.showUseremailError("check userEmail");
             }
 
         return false;

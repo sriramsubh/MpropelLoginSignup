@@ -8,10 +8,11 @@ package com.aspiresys.mpropel.mpropelloginsignup.Signup;
  * SignupPresenter to provide the business logic for the signup
  */
 
-/**
- * SignupValidator method to check the useremail and password during the signup
- * @param : useremail,password
- */
+
 public interface SignupPresenter {
+    /**
+     * SignupValidator method to check the useremail and password during the signup
+     * @param : useremail,password
+     */
     boolean SignupValidator(String useremail, String password);
 }

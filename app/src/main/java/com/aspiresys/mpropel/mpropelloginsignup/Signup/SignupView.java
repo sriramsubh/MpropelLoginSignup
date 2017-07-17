@@ -5,11 +5,9 @@ package com.aspiresys.mpropel.mpropelloginsignup.Signup;
  */
 
 public interface SignupView {
-/**setUserEmail method to validate username
-
- @Param Username to set the username
- */
-
+     /**setUserEmail method to validate username
+      @Param Username to set the username
+        */
      void setUserEmail(String username);
     /**setPassword method to set the password
     @Param password to set the password

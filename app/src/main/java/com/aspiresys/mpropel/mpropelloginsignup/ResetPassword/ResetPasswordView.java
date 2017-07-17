@@ -5,12 +5,11 @@ package com.aspiresys.mpropel.mpropelloginsignup.ResetPassword;
  */
 
 public interface ResetPasswordView {
-/**setUserEmail method to validate username
+    /**setUserEmail method to validate username
 
- @Param Username to set the username
- */
-
-     void setUserEmail(String username);
+     @Param Username to set the username
+     */
+    void setUserEmail(String username);
 
      /**showUsernameError to show username error
     @Param username to set username

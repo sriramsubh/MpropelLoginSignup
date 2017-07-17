@@ -10,12 +10,12 @@ import java.util.regex.Pattern;
  */
 
 public class LoginPresenterImpl implements LoginPresenter{
-    private LoginView loginView;
+
     private LoginFragment loginFragment;
 
-    LoginPresenterImpl(LoginView loginView,LoginFragment loginFragment)
+    public LoginPresenterImpl( LoginFragment loginFragment)
     {
-        this.loginView = loginView;
+
         this.loginFragment = loginFragment;
     }
     @Override
